@@ -1,0 +1,26 @@
+{
+  "name": "gametest",
+  "version": "1.0.0",
+  "description": "test GAME",
+  "main": "index.js",
+  "dependencies": {
+    "@types/cucumber": "^4.0.4",
+    "@types/node": "^10.7.1",
+    "@types/selenium-webdriver": "^3.0.10",
+    "protractor": "^5.4.2",
+    "typescript": "^3.0.1",
+    "cucumber": "^5.0.3",
+    "chai": "^4.2.0",
+    "mkdirp": "^0.5.1",
+    "protractor-cucumber-framework": "^6.1.1",
+    "cucumber-html-reporter": "^4.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "protractor typeScript/config/config.js",
+    "webup": "webdriver-manager update",
+    "webgo": "webdriver-manager start"
+  },
+  "author": "D H",
+  "license": "ISC"
+}
