@@ -5,14 +5,17 @@ const jsonReports = process.cwd() + "/reports/json";
 
 export const config: Config = {
 
-  seleniumAddress: "http://127.0.0.1:4444/wd/hub",
-
   SELENIUM_PROMISE_MANAGER: false,
-
+  seleniumAddress: "http://127.0.0.1:4444/wd/hub",
   baseUrl: "http://www.game.co.uk",
 
   capabilities: {
     browserName: "chrome",
+  },
+
+  params: {
+    height: 1000,
+    width: 1000
   },
 
   framework: 'custom',
@@ -23,7 +26,10 @@ export const config: Config = {
   ],
 
   onPrepare: () => {
-    browser.manage().window().maximize();
+    browser.manage().window().setSize(browser.params.width , browser.params.height);
+    browser.manage().timeouts().implicitlyWait(10000);
+    browser.manage().timeouts().pageLoadTimeout(10000);
+    browser.manage().timeouts().setScriptTimeout(10000);
     Reporter.createDirectory(jsonReports);
   },
 

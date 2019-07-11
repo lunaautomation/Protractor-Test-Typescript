@@ -1,5 +1,6 @@
-Feature: Desktop
-  @Desktop
+Feature: Mobile
+
+  @Mobile
   Scenario Outline: Check game details match their link text
 
     Given  I am on the front page of the website

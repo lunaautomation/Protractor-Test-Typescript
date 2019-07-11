@@ -17,7 +17,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "protractor typeScript/config/config.js",
+    "testmobile": "protractor typeScript/config/config.js --params.width=640 --params.height=1136 ",
+    "testgo": "protractor typeScript/config/config.js ",
     "webup": "webdriver-manager update",
     "webgo": "webdriver-manager start"
   },
