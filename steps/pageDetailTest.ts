@@ -17,15 +17,15 @@ Given(/^I am on the front page of the website$/,  async() => {
 });
 
 Given(/^I choose to list all Xbox One games$/, async() => {
-await browser.actions().mouseMove(HomeHeaders.xBoxHeader).perform();
-await HomeHeaders.xBoxAllGames.isDisplayed();
-await HomeHeaders.xBoxAllGames.click();
-await ExpectedConditions.titleContains('Xbox One Games');
+  await browser.actions().mouseMove(HomeHeaders.xBoxHeader).perform();
+  await HomeHeaders.xBoxAllGames.isDisplayed();
+  await HomeHeaders.xBoxAllGames.click();
+  await ExpectedConditions.titleContains('Xbox One Games');
 });
 
 When(/^I select (.*) from the list$/, async(gameName) => {
   await browser.actions().mouseMove(await browser.findElement(by.linkText(gameName))).perform();
-await browser.findElement(by.linkText(gameName)).click();
+  await browser.findElement(by.linkText(gameName)).click();
   await ExpectedConditions.titleContains(gameName);
 });
 
