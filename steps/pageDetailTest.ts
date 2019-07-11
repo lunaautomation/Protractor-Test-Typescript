@@ -20,7 +20,7 @@ Given(/^I am on the front page of the website on mobile$/,  async() => {
 Given(/^I choose to list all Xbox One games$/, async() => {
 await browser.actions().mouseMove(HomeHeaders.xBoxHeader).perform();
 await HomeHeaders.xBoxAllGames.click();
-await browser.wait(await ExpectedConditions.titleContains('Xbox One Games'), 5000);
+await ExpectedConditions.titleContains('Xbox One Games');
 });
 
 When(/^I select (.*) from the list$/, async(gameName) => {
