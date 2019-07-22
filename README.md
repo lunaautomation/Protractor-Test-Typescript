@@ -1,4 +1,4 @@
-# gameTechTest
+# aTechTest
 
 Clone this repository to your local machine.
 
